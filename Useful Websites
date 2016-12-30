@@ -1,0 +1,30 @@
+1. A universal document converter
+  http://pandoc.org/index.html
+  
+2. Bibtex4Word is an add-in for Microsoft Word that allows the citation of references and the insertion of a bibliography into your document using your choice of formatting style.
+  http://www.ee.ic.ac.uk/hp/staff/dmb/perl/index.html
+  
+3. Export your Excel table as latex markup which can be pasted into an existing tex document
+  http://www.ctan.org/tex-archive/support/excel2latex/
+  
+4. Export your word document into tex file
+  http://www.wordtolatex.com/
+  http://www.word2tex.com/
+  
+5. Help you understand the meaning of commands.
+  http://www.emerson.emory.edu/services/latex/latex_toc.html
+  
+6. Just draw the symbol you are looking for into the square area above and look what happens!
+  http://detexify.kirelabs.org/classify.html
+  
+7. LaTeX命令速查手册（包括手册1-6）
+  http://www.tongji.edu.cn/~yin/cn/latexfast.html#journal
+ 
+8. LaTeX Table Generator
+  http://www.tablesgenerator.com/latex_tables
+  
+9. Some free books about LaTeX
+  http://www.dickimaw-books.com/latex/
+  
+10. TeXcount is a Perl script for counting words in LaTeX documents.
+  http://app.uio.no/ifi/texcount/index.html
