@@ -1,0 +1,61 @@
+Version 0.0.1 2016.06.01 完成主文档的基本框架设计，确定使用book文类而非中文文类ctexbook
+Version 0.0.2 2016.06.02 引入ctex宏包解决中文显示问题
+Version 0.0.3 2016.06.03 引入ctexcap宏包替换ctex宏包同时解决中文和中文标题设置问题
+Version 0.0.4 2016.06.04 利用commont宏包对大段注释文字进行处理
+Version 0.0.5 2016.06.09 在主文档中用\input调入宏包调用命令和格式设置命令，正文中用\include调入各章
+Version 0.1.0 2016.06.10 引入分区版式\frontmatter、\mainmatter和\backmatter
+Version 0.1.1 2016.06.11 利用blindtext宏包提供的\blindtext命令产生文本测试代码
+Version 0.1.2 2016.06.12 用geometry将页面布局调整到与Word一致，用fancyhdr设置版式（页眉、页脚和页码）
+Version 0.1.3 2016.06.13 利用xcolor宏包提供的颜色命令调整页眉、页眉线和页脚的颜色为深灰色
+Version 0.1.4 2016.06.14 修改章节首页的版式使其与其他页面一致
+Version 0.1.5 2016.06.15 调整chapter标题与上下文的间距
+Version 0.1.6 2016.06.16 设置中文封面、英文封面和声明部分不显示页眉页脚
+Version 0.1.7 2016.06.17 调整目录深度
+Version 0.1.8 2016.06.18 利用titletoc宏包调整chapter和section的显示格式，利用hyperref产生PDF书签
+Version 0.1.9 2016.06.19 利用graphicx宏包插入图片并利用calc宏包提供的算数运算给定图片宽度
+Version 0.2.0 2016.06.20 利用ccaption设定中英双语标题并调整分隔符为空格（\caption命令仅能设置一个）
+Version 0.2.1 2016.06.21 利用array、multirow和booktabs绘制表格
+Version 0.2.2 2016.06.22 增加\Blindtext命令产生多段文本，调用lipsum宏包产生随机段落
+Version 0.2.3 2016.06.23 利用lineno插入行号
+Version 0.2.4 2016.06.24 插入参考文献并利用JabRef管理文献数据库，该软件可自动生成文献检索名
+Version 0.2.5 2016.06.25 利用natbib宏包插入参考文献并调整文献条目之间的距离
+Version 0.2.6 2016.06.25 调用amsmath
+Version 0.2.7 2016.06.25 调用nag检测文档中是否使用已经被淘汰了的宏包以及过时的命令
+Version 0.2.8 2016.06.25 调用microtype改善单词、字母的间距
+Version 0.2.9 2016.06.26 删除利用\chapter命令产生参考文献的代码避免产生多余的两页空白
+Version 0.3.0 2016.06.27 \renewcommand{\contentsname}{目录}\renewcommand{\bibname}{参考文献}
+Version 0.3.1 2016.06.28 调用siunitx输入单位符号（需要升级L3kernel和L3packages两个宏包）
+Version 0.3.2 2016.06.28 制作了中文和英文封面（使用了ulem宏包和titlepage环境）
+Version 0.3.3 2016.06.29 消除了中英文封面后的空白页的页眉和页脚，但编译会显示有一处错误，暂时忽略
+Version 0.3.4 2016.11.14 解决调用后ulem下划线宏包导致斜体命令\emph{}变为下划线的问题，改用\textit{}
+Version 0.3.5 2016.11.15 使用\tabincell完成表格内换行，然而该方法无法自动确定换行位置。可用tabularx
+Version 0.3.6 2016.11.16 使用ltxtable宏包插入跨页可调列宽的表格
+Version 0.3.7 2016.11.17 使用\-或\allowbreak断字，前者插入break dash，后者没有
+Version 0.3.8 2016.11.18 用\renewcommand{\figurename}{图}和\renewcommand{\tablename}{表}改变双语标题
+Version 0.3.9 2016.11.19 Error: Support package expl3 too old请利用Update MiKTeX更新l3kernel和l3packages
+Version 0.4.0 2016.11.20 使用\captionnamefont{\small}和\captiontitlefont{\small}调整标题字号
+Version 0.4.1 2016.11.21 使用\small调整表格内容的字号
+Version 0.4.2 2016.12.03 用makebst.tex制作了自己的bst参考文献格式文档（格式暂时还不完全符合要求）
+Version 0.4.3 2016.12.04 dbj文件中的`IN' WITH JOURNAL NAMES控制期刊名称前是否有In
+Version 0.4.4 2016.12.05 dbj文件中的EMPHASIS: (affects all so-called italics)控制斜体或下划线是否显示
+Version 0.4.5 2016.12.06 dbj文件中的COMMA BEFORE `ET AL':控制et al前是否有逗号
+Version 0.4.6 2016.12.07 dbj文件中的FONT OF `ET AL':控制et al是否斜体
+Version 0.4.7 2016.12.08 dbj文件中的NO `AND' IN REFERENCE LIST:控制最后一个作者前是否有and
+Version 0.4.8 2016.12.09 bst文件中FUNCTION {article}内的format.note output控制参考文献条目是否显示注释信息
+Version 0.4.9 2016.12.10 直接在JabRef中利用latex代码\textit{}控制物种名斜体
+Version 0.5.0 2016.12.11 直接在标题末端添加[J][M]生成文献条目后面的[J][M]，这是苦逼的事情，但暂时没有找到其他手段
+Version 0.5.1 2016.12.12 natbib中的选项sort控制文中citations的排序
+Version 0.5.2 2016.12.13 类似h!tbp这样的图片位置控制码中，感叹号前面的表示要LaTeX严格按要求做，后面的随意即可
+Version 0.5.4 2016.12.15 修改图表和章计数器为附录部分产生符合要求的图表编号
+Version 0.5.5 2016.12.16 利用命令\linespread{1.667}设置全文为2倍行距
+Version 0.5.6 2016.12.17 利用setspace宏包提供的spacing环境单独调整目录的行距
+Version 0.5.7 2016.12.18 重写了部分中文封面的代码
+Version 1.0.1 2016.12.19 遇到某页仅有图片，虽有空白但无文字的情况将图片位置参数[htbp]改成[htb!]可使其正常排版
+Version 1.0.2 2016.12.20 利用图片缩放命令\resizebox调整表格的宽度为\textwidth
+Version 1.0.3 2016.12.21 添加断词声明
+Version 1.0.4 2016.12.22 tex文件的名称中不能使用空格，否则编译出错
+Version 1.0.5 2016.12.23 使用词距补偿命令\/加大斜体和直立体之间的间距（效果不明显，如特别需要可使用空格P13或水平空白命令P127）
+Version 1.0.6 2016.12.24 增加了脚注，使用脚注宏包footnpag使脚注以页为排序单位
+
+
+
