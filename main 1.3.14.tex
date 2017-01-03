@@ -1,0 +1,30 @@
+% !Mode:: "TeX:UTF-8"
+\documentclass[12pt, a4paper, twoside, openright]{book}
+\input{package}
+\input{commands}
+\input{hyphenation}
+\begin{document}
+\include{CHcover}
+\include{ENcover}
+\include{announcement}
+\frontmatter
+\pagenumbering{Roman}
+\include{acknowledgement}
+\include{CHabstract}
+\include{ENabstract}
+\include{tableofcotents}
+\mainmatter
+\pagenumbering{arabic}
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\backmatter
+\include{summary}
+\include{references}
+\include{appendagesA}
+\include{appendagesB}
+\include{appendagesC}
+\include{CV}
+\end{document}

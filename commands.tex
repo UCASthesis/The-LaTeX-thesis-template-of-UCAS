@@ -1,0 +1,35 @@
+\titlecontents{chapter}%
+[0em]%
+{\vspace{3mm}\heiti}%
+{\thecontentslabel}%
+{}%
+{\titlerule*[0.5pc]{$\cdot$}\bf\contentspage}
+\CTEXsetup[beforeskip={0pt},afterskip={15pt},nameformat+={\Large},titleformat+={\Large}]{chapter}
+\CTEXsetup[format+={\flushleft\large},beforeskip={3.25ex plus 1ex minus .2ex},afterskip={1.5ex plus .2ex}]{section}
+\CTEXsetup[format+={\normalsize},beforeskip={1.5ex plus .2ex minus .2ex}]{subsection}
+\CTEXsetup[beforeskip={1.5ex plus .2ex minus .2ex}]{subsubsection}
+\setcounter{secnumdepth}{3}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[OC]{\color{darkgray} \nouppercase{ \leftmark}}
+\fancyhead[EC]{\color{darkgray} \nouppercase{衣藻鞭毛内运输蛋白IFT46基体定位机制的研究}}
+\fancyfoot[OR, EL]{\color{darkgray} \thepage}
+\renewcommand{\headrule}{\color{darkgray} \hrule width\headwidth}
+\fancypagestyle{plain}{\fancyhf{}%
+\fancyhead[OC]{\color{darkgray} \nouppercase{ \leftmark}}%
+\fancyhead[EC]{\color{darkgray} \nouppercase{your CHtitle here}}%
+\fancyfoot[OR, EL]{\color{darkgray} \thepage}%
+\renewcommand{\headrule}{\color{darkgray} \hrule width\headwidth}}
+\captiondelim{\space}
+\setlength{\abovetopsep}{5pt}
+\setlength{\belowrulesep}{0ex}
+\setlength{\aboverulesep}{0ex}
+\setlength{\belowbottomsep}{0pt}
+\addtolength{\bibsep}{-11pt}
+\usepackage{microtype}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+\makeindex
+\captionnamefont{\small}
+\captiontitlefont{\small}
+\linespread{1.667}
+
