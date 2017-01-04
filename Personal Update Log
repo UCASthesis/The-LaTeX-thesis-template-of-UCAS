@@ -60,4 +60,5 @@ Version 1.0.7 2017.01.03 整理tex文档并上传至GitHub
 Version 1.0.8 2017.01.04 usernames and passwords of WinEdt: linuxfans superpig;2266474541532194432;Hard Wisdom;1135362106278309830
 Version 1.0.9 2017.01.04 为下划线宏包ulem增加normalem选项阻止其修改字体强调命令\emph
 Version 1.1.0 2017.01.04 利用\pageref命令为交叉引用增加了页码描述
+Version 1.1.1 2017.01.04 调用syntonly宏包使文档编译时只检查语法，不生成结果文件
 
