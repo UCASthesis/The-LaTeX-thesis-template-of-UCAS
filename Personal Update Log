@@ -1,4 +1,4 @@
-Version 0.0.1 2016.06.01 完成主文档的基本框架设计，确定使用book文类而非中文文类ctexbook
+﻿Version 0.0.1 2016.06.01 完成主文档的基本框架设计，确定使用book文类而非中文文类ctexbook
 Version 0.0.2 2016.06.02 引入ctex宏包解决中文显示问题
 Version 0.0.3 2016.06.03 引入ctexcap宏包替换ctex宏包同时解决中文和中文标题设置问题
 Version 0.0.4 2016.06.04 利用commont宏包对大段注释文字进行处理
@@ -57,3 +57,7 @@ Version 1.0.4 2016.12.22 tex文件的名称中不能使用空格，否则编译�
 Version 1.0.5 2016.12.23 使用词距补偿命令\/加大斜体和直立体之间的间距（效果不明显，如特别需要可使用空格P13或水平空白命令P127）
 Version 1.0.6 2016.12.24 增加了脚注，使用脚注宏包footnpag使脚注以页为排序单位
 Version 1.0.7 2017.01.03 整理tex文档并上传至GitHub
+Version 1.0.8 2017.01.04 usernames and passwords of WinEdt: linuxfans superpig;2266474541532194432;Hard Wisdom;1135362106278309830
+Version 1.0.9 2017.01.04 为下划线宏包ulem增加normalem选项阻止其修改字体强调命令\emph
+Version 1.1.0 2017.01.04 利用\pageref命令为交叉引用增加了页码描述
+
