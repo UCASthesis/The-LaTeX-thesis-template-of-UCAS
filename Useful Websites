@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 ﻿1. A universal document converter
+=======
+0. 当你遇到困难时，记得找LaTeX警察叔叔
+  http://tex.stackexchange.com/
+
+1. A universal document converter
+>>>>>>> origin/master
   http://pandoc.org/index.html
   
 2. Bibtex4Word is an add-in for Microsoft Word that allows the citation of references and the insertion of a bibliography into your document using your choice of formatting style.
@@ -13,6 +20,9 @@
   
 5. Help you understand the meaning of commands.
   http://www.emerson.emory.edu/services/latex/latex_toc.html
+  
+6. 华盛顿杰弗逊学院LaTeX课件
+  http://www2.washjeff.edu/users/rhigginbottom/latex/lectures.html
   
 6. Just draw the symbol you are looking for into the square area above and look what happens!
   http://detexify.kirelabs.org/classify.html
@@ -31,3 +41,6 @@
   
 10. TeXcount is a Perl script for counting words in LaTeX documents.
   http://app.uio.no/ifi/texcount/index.html
+  
+11. 新手请先读我
+  http://bbs.ctex.org/forum.php?mod=viewthread&tid=48244&page=1#pid337079
