@@ -19,12 +19,10 @@ allbordercolors=black, hidelinks,pdfpagelabels]{hyperref}
 \RequirePackage[version-1-compatibility]{siunitx}
 \RequirePackage{upgreek,ulem,makeidx,paralist,bbding,remreset,setspace,footnpag}
 
-\titlecontents{chapter}%
-[0em]%
-{\vspace{3mm}\heiti}%
-{\thecontentslabel}%
-{}%
-{\titlerule*[0.5pc]{$\cdot$}\bf\contentspage}
+\dottedcontents{chapter}[4em]{\vspace{3mm}\heiti\bf}{4em}{0.2pc}
+\dottedcontents{section}[4em]{\vspace{1.5mm}}{2em}{0.2pc}
+\dottedcontents{subsection}[7em]{\vspace{0.75mm}}{3em}{0.2pc}
+\dottedcontents{subsubsection}[11em]{}{4em}{0.2pc}
 \CTEXsetup[beforeskip={0pt},afterskip={15pt},nameformat+={\Large},titleformat+={\Large}]{chapter}
 \CTEXsetup[format+={\flushleft\large},beforeskip={3.25ex plus 1ex minus .2ex},afterskip={1.5ex plus
 .2ex}]{section}
