@@ -70,4 +70,4 @@ Version 1.1.7 2017.03.01 为代表颜色如红色的词汇设置颜色（\textco
 Version 1.1.8 2017.03.02 为了便于阅读及增加美感，在中英文及中文和数字之间设置空格（\ 或{} ）
 Version 1.1.9 2017.03.09 调整了目录条目上间距和指引线的圆点密度
 Version 1.2.0 2017.03.09 linespread虽然修改了行距，但图表和脚注行距被setspace宏包抑制，需要使用{\setstretch{1.667}text\par}重新设置
-
+Version 1.2.0 2017.03.09 使用\protect\footnotemark和\footnotetext{www.google.com}在图注中插入脚注
