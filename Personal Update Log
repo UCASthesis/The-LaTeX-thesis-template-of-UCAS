@@ -72,4 +72,5 @@ Version 1.1.9 2017.03.09 调整了目录条目上间距和指引线的圆点密�
 Version 1.2.0 2017.03.09 linespread虽然修改了行距，但图表和脚注行距被setspace宏包抑制，需要使用{\setstretch{1.667}text\par}重新设置
 Version 1.2.1 2017.03.09 使用\protect\footnotemark和\footnotetext{www.google.com}在图注中插入脚注
 Version 1.2.2 2017.12.02 可以使用crop宏包设置切割标志便于打印后切割，不过一般在工业印刷上使用，因为这需要使用比设置更大的纸张
+Version 1.2.3 2018.01.19 增加了一个写日记的模板Diary，该模板来源于StackExchange，结构比较简单，有空可以改进一下（与本毕业论文无关）
 
