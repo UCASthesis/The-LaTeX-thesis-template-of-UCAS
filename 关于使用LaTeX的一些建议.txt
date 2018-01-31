@@ -1,0 +1,82 @@
+
+
+作者：邓博元
+链接：https://www.zhihu.com/question/21088362/answer/29312831
+来源：知乎
+著作权归作者所有，转载请联系
+作者获得授权。
+
+1. 选取好的发行版并使用 IDE，比如 TeX Live + TeXstudio，勤更新。文本编辑器能给的支持太少了，根本不能应付大型文档。
+TeXstudio 这种 IDE 有代码折叠，语法句法（不只是拼写）检查、inline 预览、代码和PDF间跳转等重要功能。
+
+
+
+2. 下决心用 LaTeX 了，就不要再使用 LyX、Pandoc 啥的了。那些都是隔靴搔痒，和你用 LaTeX 的初衷相违背，排版强迫症发作起来无药可救。
+
+
+3. 处理中文，请使用 XeLaTeX 引擎和 xeCJK 包，不要碰 CTeX 及古老的 CJK 方案。
+
+
+4. 善于用 \include 切分文档。
+
+5. 
+功能相近的包，选取未停止维护、与引擎兼容且最广受好评的；功能非常丰富的包，如绘图包等，学习最先进的。
+
+6. 
+把 amsmath 包的官方文档啃几遍，有问题上 stackexchange 的 TeX 版找方案。能排公式和排对公式之间的区别是很大的。
+比如函数该用内置的带\的版本（\cos vs cos），绝对值符号究竟是哪个，\dfrac 和 \tfrac 的区别等等，有的出版社都不知道。
+
+7. 
+学会换行和缩进，\usepackage 可以以字典序排列；包内设置，缩进后字典序排列。
+例如：
+
+\documentclass[a4paper]{article}
+
+
+\usepackage{amsmath}
+
+\usepackage{fontspec}
+    
+	\setmainfont{Times New Roman}
+    
+	\setsansfont{Arial}
+...
+
+\usepackage{tikz}
+    
+	\usetikzlibrary{arrows}
+
+\usepackage[indentfirst]{xeCJK}
+    
+	\setCJKmainfont[BoldFont={SimHei}]{SimSun}
+    
+	\setCJKsansfont{KaiTi}
+
+
+
+\begin{document}
+
+...
+
+\end{document}
+
+
+8. 遵循最小手动配置原则，尽量不自行定义命令、变量等。杜绝手动几何调整。
+
+9. 
+多看文档（texdoc 调用）和TeX - LaTeX Stack Exchange。
+
+
+
+10. 包推荐：
+
+biber 代替 bibtex
+
+polyglossia 代替 babel
+
+xindy 代替 makeindex
+
+画图用 TikZ + Asymptote 分工，代替 MetaPost、PSTricks 和 xfig等等其他所有绘图包。
+
+http://tex.stackexchange.com/questions/11462/does-anyone-know-a-good-xetex-tutorial
+XeLaTeX产生的原因之一是在编码和字体上进行更好的支持（可以看维基百科的条目），语法本身和LaTeX没有很大区别。根据 这个问答 ，如果有LaTeX的基础，好好学习fontspec就可以掌握XeLaTeX啦。不过对于中文的支持并不是想象的那么好，还需要一些额外的设置，包括间距什么的，这个有很多额外的资料。也就是说，并不是xelatex拿来加一条命令直接就能得到像用pdflatex时ctex宏包那样的效果。
