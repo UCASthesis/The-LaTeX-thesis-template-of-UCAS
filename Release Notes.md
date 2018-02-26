@@ -5,6 +5,7 @@
 - 根据TeX创始人的习惯，任何bug修复版本将按照圆周率在修订版本号后添加一位
 - 其他开发者在读懂代码的基础上重新开发的分支版本可更改主版本号为2，依此类推
 - 下一步的思路是放弃CJK方案转而使用XeLaTeX引擎和xeCJK宏包，理论上大部分源代码都可重用。本人于2018年1月31日增加了一个支持XeLaTeX引擎的简单模板，感兴趣的LaTeXer可自己折腾。在LaTeX3正式发布前，本人将不再更新。
+- 在参考文献的处理上也可以使用最新的BibLaTeX。我们正在使用的BibTeX是一种方式，它本身不需要加载任何的包，但编译的时候需使用bibtex.exe。由于它不太灵活，最近又出现了新的方式—BibLaTeX方式。BibLaTeX包是一个更加灵活的文献处理方式，它不仅支持更多的entry type，而且支持多次加入bib文件，支持多种不同的bib内容书写格式，也支持从远程加入bib文件，支持在文档的任何位置显示参考文献的内容。比如，你可以在论文的每一章后面添加参考文献的显示。从发展的眼光来看，BibLaTeX是一个比BibTeX更加先进的技术，在未来的某个阶段肯定会取代BibTeX。BibLaTeX需与Biber命令配合使用。Biber的主页为http://biblatex-biber.sourceforge.net/。
 - 后续开发者请留意pTeX、upTeX、pTeX-ng、LaTeX3以及iTeX
 - 个人认为目前在排版上能够比肩LaTeX的是Rmd（R + markdown）或markdown结合其他有超强绘图、公式处理能力的语言，这一点需要密切关注
 
