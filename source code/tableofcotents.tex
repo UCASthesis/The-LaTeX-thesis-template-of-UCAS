@@ -1,0 +1,25 @@
+%空行代表重启一个段落。
+%理论上标题名应该已经完全转化为中文，但是目录和参考文献还是英文，需要处理
+%caption提供的修改标题预定名的命令，在这里不起作用
+%\CTEXoptions[contentsname={目录}, bibname={参考文献}]
+%系统提供的通过重定义命令修改标题名
+\renewcommand{\contentsname}{目\quad 录}
+\renewcommand{\bibname}{参考文献}
+\renewcommand{\indexname}{索引}
+%如果这里采用chapter插入目录会产生两页空白，因为\tableofcontents命令又会重启一章
+%\chapter{目录}
+%如果使用article文类请使用\clearpage命令，该命令可以解决手动添加目录到目录中页码不一致的问题
+\cleardoublepage
+%如果使用了Hyperref宏包生成书签，还需要使用\plantomsection命令，否则书签中显示不正常
+\phantomsection
+\addcontentsline{toc}{chapter}{目\quad 录}
+%调整目录深度到subsubsection
+\setcounter{tocdepth}{3}
+%直接在奇数页页眉中显示章标题会多处一些章标题内部编号，这里重新定义\leftmark，后续所有章节都要重新定义
+\renewcommand{\leftmark}{目\quad 录}
+%利用setspace宏包提供的spacing环境修改目录的行距
+\begin{spacing}{1.0}
+%插入目录
+\tableofcontents
+%利用setspace宏包提供的spacing环境修改目录的行距
+\end{spacing}

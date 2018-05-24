@@ -1,0 +1,79 @@
+%开始表格浮动体环境，其中！表示取消严谨限制，h表示在此处插入，t表示在本页或下一页顶部插入
+\begin{longtable}{lXX @{}}
+%绘制一条水平线
+\toprule
+\textbf{Primers Name} & \textbf{Primer Sequence (5’ to 3’)} & \textbf{Description}\\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{\footnotesize 接上页}\\
+\toprule
+\textbf{Primers Name} & \textbf{Primer Sequence (5’ to 3’)} & \textbf{Description}\\
+\midrule
+\endhead
+\hline
+\multicolumn{3}{r}{\footnotesize 接下页}\\
+\endfoot
+\endlastfoot
+%break the sequence every 20 bases using \- or \allowbreak
+4xNLS-1F & ATCGACCCCAAGAAGAAGC\allowbreak GCAAGGT & oligonucleotide, to anneal to synthesize 4xNLS\\
+4xNLS-2R & CCTTGCGCTTCTTCTTGGGG\allowbreak TCCACCTTGCGCTTCTTCTT\allowbreak GGGGTCGAT & oligonucleotide, to anneal to synthesize 4xNLS\\
+4xNLS-3F & GGACCCCAAGAAGAAGCGC\allowbreak AAGGTGGACCCCAAGAAGA\allowbreak AGCGCAAGGTGGACCCCAA\allowbreak GAAGAAGCGCAAGGTGTAA\allowbreak G & oligonucleotide, to anneal to synthesize 4xNLS\\
+4xNLS-4R & CACCTTGCGCTTCTTCTTGG\allowbreak GGTCCA & oligonucleotide, to anneal to synthesize 4xNLS\\
+4xNLS-5R & AATTCTTACACCTTGCGCTT\allowbreak CTTCTTGGGGTC & oligonucleotide, to anneal to synthesize 4xNLS\\
+ACE-F &    GGAATTC\emph{\textbf{CATATG}}TGTGCTC\allowbreak CAATGACCAAAGAGAT & forward, to amplify the promoter of \textit{IFT46} containing \textit{Nde}I cutting site (in bold and underlined)\\
+A-R & ATA\emph{\textbf{GATATC}}GTTGTAAGCAC\allowbreak CCGGCGGT & reverse, to amplify \textit{IFT46-N1} containing \textit{Eco}RV cutting site (in bold and underlined)\\
+BBTS1-R & ATA\emph{\textbf{GATATC}}CAGCGTGCACA\allowbreak CCAGCCGG & reverse, to amplify \textit{BBTS1} containing \textit{Eco}RV cutting site (in bold and underlined)\\
+BBTS2-F & ATAGGAGCAAGCAGCAGCCA\allowbreak TGCTGGACATTCCCGTGTAC\allowbreak GACGA & forward, to amplify \textit{BBTS2}\\
+BBTS2-R & TCGTCGTACACGGGAATGTC\allowbreak CAGCATGGCTGCTGCTTGCT\allowbreak CCTAT & reverse, to amplify the promoter, 5’-UTR and the start codon of \textit{IFT46}\\
+BBTS3-R & ATA\emph{\textbf{GATATC}}CTCCATCTCCA\allowbreak TGTGCTGCCTGTC & reverse, to amplify \textit{BBTS3} containing \textit{Eco}RV cutting site (in bold and underlined)\\
+BBTS4-1 & ATAGGAGCAAGCAGCAGCC\allowbreak ATGAACAAGCTGGA & oligonucleotide, to anneal to synthesize \textit{BBTS4}\\
+BBTS4-2 & CGGCATGTCGGGCGGCGGC\allowbreak GGCGGCATGATGGGC & oligonucleotide, to anneal to synthesize \textit{BBTS4}\\
+BBTS4-3 & GGCGGCGCGGATGTGCTGG\allowbreak GCTTG\emph{\textbf{GATATC}}TAT & oligonucleotide, to anneal to synthesize \textit{BBTS4} containing \textit{Eco}RV cutting site (in bold and underlined)\\
+BBTS4-4 & CGCCGCCCGACATGCCGTCC\allowbreak AGCTTGTTCATGGCTGCTGC\allowbreak TTGCTCCTAT & oligonucleotide, to anneal to synthesize \textit{BBTS4}\\
+BBTS4-5 & ATA\emph{\textbf{GATATC}}CAAGCCCAGCA\allowbreak CATCCGCGCCGCCGCCCATC\allowbreak ATGCCGCCGC & oligonucleotide, to anneal to synthesize \textit{BBTS4} containing \textit{Eco}RV cutting site (in bold and underlined)\\
+BBTS4-R & CGACATGCCGTCCAGCTTGT\allowbreak TCATGGCTGCTGCTTGCTCC\allowbreak TAT & reverse, to amplify the promoter, 5’-UTR and the start codon of \textit{IFT46}\\
+BBTS5-F & ATAGGAGCAAGCAGCAGCCA\allowbreak TGCTGGACATTCCCGTGTAC\allowbreak GACGA & forward, to amplify \textit{BBTS5}\\
+BBTS5-R1 & TCGTCGTACACGGGAATGT\allowbreak CCAGCATGGCTGCTGCTTGC\allowbreak TCCTAT & reverse, to amplify the promoter, 5’-UTR and the start codon of \textit{IFT46}\\
+BBTS5-R2 & ATA\emph{\textbf{GATATC}}CTCCATCTCCA\allowbreak TGTGCTGCCTGTC & reverse, to amplify \textit{BBTS5} containing \textit{Eco}RV cutting site (in bold and underlined)\\
+BBTS6-6 & CCGGCTGGTGTGCACGCTGA\allowbreak ACAAGCTGGA & oligonucleotide, to anneal to synthesize \textit{BBTS6}\\
+BBTS6-7 & CGCCGCCCGACATGCCGTCC\allowbreak AGCTTGTTCAGCGTGCACAC\allowbreak CAGCCGG & oligonucleotide, to anneal to synthesize \textit{BBTS6}\\
+BBTS6-R & CGACATGCCGTCCAGCTTGT\allowbreak TCAGCGTGCACACCAGCCG\allowbreak G & reverse, to amplify the promoter, 5’-UTR and the start codon of \textit{IFT46}\\
+BBTS-F & GGAATTC\emph{\textbf{CATATG}}TGTGCTC\allowbreak CAATG & forward, to amplify the promoter of \textit{IFT46} containing \textit{Nde}I cutting site (in bold and underlined)\\
+B-F & CAAGCAGCAGCCATGGCACA\allowbreak GGTCCGTGGGTTGCGATG & forward, to amplify \textit{IFT46$\Updelta$N1}\\
+B-R & CCCACGGACCTGTGCCATGG\allowbreak CTGCTGCTTGCTCCTA & reverse, to amplify the promoter and 5’-UTR of \textit{IFT46}\\
+CBLP-F & TGCTGTGGGACCTGGCTGA & forward, for quantitative real-time PCR of \textit{CBLP}\\
+CBLP-R & GCCTTCTTGCTGGTGATGTT\allowbreak G & reverse, for quantitative real-time PCR of \textit{CBLP}\\
+C-R & ATA\emph{\textbf{GATATC}}GAGCCCCAGGT\allowbreak AGTCGGG & reverse, to amplify \textit{IFT46-N} containing \textit{Eco}RV cutting site (in bold and underlined)\\
+D-F & CAAGCAGCAGCCATGAAGGT\allowbreak GCGGGGGGAGGGGGG & forward, to amplify \textit{IFT46-C}\\
+D-R & CTCCCCCCGCACCTTCATGG\allowbreak CTGCTGCTTGCTCCTAT & reverse, to amplify the promoter and 5’-UTR of \textit{IFT46}\\
+E-R & ATA\emph{\textbf{GATATC}}CTCTGGCATGC\allowbreak GCTTGCTGTA & reverse, to amplify \textit{IFT46$\Updelta$C1} containing \textit{Eco}RV cutting site (in bold and underlined)\\
+F-F & CAAGCAGCAGCCATGATCGA\allowbreak GGCGCTGATGCAGGAGTG & forward, to amplify \textit{IFT46-C1}\\
+F-R & CATCAGCGCCTCGATCATGG\allowbreak CTGCTGCTTGCTCCTAT & reverse, to amplify the promoter and 5’-UTR of \textit{IFT46}\\
+HA-1 & ATCTACCCCTACGACGTGCC\allowbreak CGACTACGCCTACCCCTACG\allowbreak AC & oligonucleotide, to anneal to synthesize 3xHA\\
+HA-2 & GTGCCCGACTACGCCTACCC\allowbreak CTACGACGTGCCCGACTACG\allowbreak CCG & oligonucleotide, to anneal to synthesize 3xHA\\
+HA-3 & TAGGCGTAGTCGGGCACGTC\allowbreak GTAGGGGTAGGCGTAGTCGG\allowbreak GCACGTCGTAGGGGTAGAT & oligonucleotide, to anneal to synthesize 3xHA\\
+HA-4 & AATTCGGCGTAGTCGGGCAC\allowbreak GTCGTAGGGG & oligonucleotide, to anneal to synthesize 3xHA\\
+IFT46-11 & ATGGATGACTCTATGGACTA\allowbreak CCCTGAC & forward (\textit{primer pair 1}), for RT-PCR of \textit{IFT46} (Hou et al, 2007)\\
+IFT46-2 & GTGCTTTCCAGCCTCATAGC & reverse (\textit{primer pair 1}), for RT-PCR of \textit{IFT46} (Hou et al, 2007)\\
+IFT46-28 & GCTTGTACTCCTGTGCGTTG & reverse (\textit{primer pair 2}), for RT-PCR and quantitative real-time PCR of \textit{IFT46} (Hou et al, 2007)\\
+IFT46-29 & TACCTGGAGTTCAAGAACAA\allowbreak CC & forward (\textit{primer pair 4}), for RT-PCR of \textit{IFT46}\\
+IFT46-3 & GCCCTTCATCCCTGACTACA & forward (\textit{primer pair 3}), for RT-PCR of \textit{IFT46} (Hou et al, 2007)\\
+IFT46-30 & GTAGCGGGCGAAGCACAT & reverse (\textit{primer pair 4}), for RT-PCR of \textit{IFT46}\\
+IFT46-4 & CTTGTGGATGTCGTTGATGG & reverse (\textit{primer pair 3}), for RT-PCR of \textit{IFT46} (Hou et al, 2007)\\
+IFT46-9 & ACTCTCACCAACGGGCTATG & forward (\textit{primer pair 2}), for RT-PCR and quantitative real-time PCR of \textit{IFT46} (Hou et al, 2007)\\
+IFT46-F & GGAATTC\emph{\textbf{CATATG}}TGTGCTC\allowbreak CAATGACCAAAGAGATAGGA\allowbreak CAT & forward, to amplify \textit{IFT46} containing \textit{Nde}I cutting site (in bold and underlined)\\
+IFT46-R & ATA\emph{\textbf{GATATC}}CAAGCCCAGCA\allowbreak CATCCGCGC & reverse, to amplify \textit{IFT46} containing \textit{Eco}RV cutting site (in bold and underlined)\\
+IFT52A-F & GGAATTC\emph{\textbf{CATATG}}CATATGC\allowbreak TGGGCTGCGGC & forward, to amplify genomic DNA of \textit{IFT52} containing \textit{Nde}I cutting site (in bold and underlined)\\
+IFT52B-R & TTT\emph{\textbf{GATATC}}CAGCTCGAACT\allowbreak GGTCGCCGAACT & reverse, to amplify genomic DNA of \textit{IFT52} containing \textit{Eco}RV cutting site (in bold and underlined)\\
+IFT52C-F & GAGCTACTTAACAGCCATGG\allowbreak CGCTGGGGCTGTTCGACCTG & forward, to amplify \textit{IFT52C} for In-Fusion HD cloning\\
+IFT52C-R & AGGTCGAACAGCCCCAGCGC\allowbreak CATGGCTGTTAAGTAGCTCT\allowbreak CAG & reverse, to amplify \textit{IFT52C} for In-Fusion HD cloning\\
+NLS-F & \emph{\textbf{CCCGGG}}GGCGCCTCCGGCC\allowbreak AGGGCGCCTCCGGCGCGATG\allowbreak GCCAAGGGCGAGGAGCTGTT & forward, to amplify \textit{yfp-NLS} containing \textit{Sma}I cutting site (in bold and underlined)\\
+NLS-R & \emph{\textbf{GAATTC}}TTACACCTTGCGCT\allowbreak TCTTCTTG & reverse, to amplify \textit{yfp-NLS} containing \textit{Eco}RI cutting site (in bold and underlined)\\
+Pro-R & ACT\emph{\textbf{GATATC}}CATGGCTGCTG\allowbreak CTTGCTCCTA & reverse, to amplify the promoter, 5’-UTR and the start codon of \textit{IFT46} containing \textit{Eco}RV cutting site (in bold and underlined)\\
+SDM-F & GTGTGCACGGAGGAGGACAT\allowbreak TCCC & forward, for site-directed mutagenesis of \textit{IFT46}\\
+SDM-R & CTCCTCCGTGCACACCAGCC\allowbreak GGGCG & reverse, for site-directed mutagenesis of \textit{IFT46}\\
+YFP-F & \emph{\textbf{CATATG}}ATGGCCAAGGGCGA\allowbreak GGA & forward, to amplify \textit{yfp} gene containing \textit{Nde}I cutting site (in bold and underlined)\\
+YFP-R & \emph{\textbf{GATATC}}CTTGTACAGCTCGT\allowbreak CCATGC & reverse, to amplify \textit{yfp} gene containing \textit{Eco}RV cutting site (in bold and underlined)\\
+\bottomrule
+%结束表格浮动体环境
+\end{longtable}

@@ -1,0 +1,141 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%免责声明%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1. 所有中国科学院大学的单位和个人可任意使用、修改、复制和传播该模板，但需要在作品中标明来源。
+%2. 禁止用于任何商业活动。
+%3. 限于开发者水平，此模板中可能存在错误，由此造成的任何损失开发者概不负责。
+%4. 本模板中包含开发者个人的博士学位论文，使用过程中请严格遵守中国科学院大学相关规定
+%5. 本协议未明示授权的其他一切权利仍归开发者所有，用户使用其他权利时必须获得作者的书面同意。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%版本号声明%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   遵照基本软件版本命名规范，该发布版本的主版本号为1，次版本号为3，修订版本号为14，日期版本号为发布日期
+%   根据TeX创始人的习惯，任何bug修复版本将按照圆周率在修订版本号后添加一位
+%   其他人在读懂代码的基础上重新开发的其他版本可更改主版本号为2，依此类推
+%   下一步的思路是放弃CTeX和CJK方案转而使用XeLaTeX引擎和xeCJK包，理论上大部分源代码都可以重用
+%   为便于记忆，所有版本均有一个由开发者决定的以某种植物命名的代号，此版本的代号为Clover
+%   Version number: 1.3.14_20161208_Release
+%        Code name: Clover
+%%%%%%%%%%%%%%%%%%%%%%%%注意：凡是用%开头的行都是注释行，TeX不会编译它们%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%标明文档使用的编码方式。UTF-8是Unicode的一种，使用它可以方便的编辑各种语言。如果没有正确设置编码方式，编译带中文的文档会产生 Package CJK Error: Invalid character code这样的错误。手动设置文档编码方式方法如下：document/document settings/format/UTF-8。使用UTF-8 + XeLaTeX排版中文文档是一种完美选择。但这里我使用的是PDFLaTeX引擎，这样可以一步到位直接生成最后的PDF文件。
+% !Mode:: "TeX:UTF-8"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%若打开tex文档报错请使用记事本打开复制里面的内容到新建的tex文档并保存为UTF-8格式即可。这可能是winedt7.0或ctex 套装的bug。注意文件名和保存路径中不要有中文。
+%今晚的月色真美。
+%另外，不要直接用记事本打开文档进行编辑再保存（虽然你能打开）。因为Windows会在UTF-8 格式的文档前加UNICODE BOM。 而其他软件可能并不这么做。其结果就是Error。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%设置文类为book，其中字号为12 pt，使用A4纸且每章必须从右页开始。该文类默认章节首页使用plain版式，该版式默认页眉空置，页码置于页脚中部。所以后面需要重新定义plain版式。关于文类中各选项的含义请参考http://texblog.org/2013/02/13/latex-documentclass-options-illustrated/#doublesided
+\documentclass[12pt, a4paper, twoside, openright]{book}
+%调入模板相关说明信息。
+%该文件（未发布）仅供开发者个人用于记录和查阅，不含任何代码但有特殊字符，故不要将其调入。
+%\input{log}
+%调入宏包调用信息。
+%input和include命令均能够调入子文档，但include会重启一页
+\input{package}
+%调入修改默认设置的相关命令。
+%input和include命令均能够调入子文档，但include会重启一页
+\input{commands}
+%调入断词声明
+%input和include命令均能够调入子文档，但include会重启一页
+\input{hyphenation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%该命令仅用于调试，将需要调入的文件的文件名加入括号中即可。请在final版本中将其注释掉。
+%\includeonly{tableofcotents, references, appendagesA, appendagesB, appendagesC, CV}
+%list of all included files
+%CHcover, ENcover, announcement, acknowledgement, CHabstract, ENabstract, tableofcotents, chapter1, chapter2, chapter3, %references, appendagesA, appendagesB, appendagesC, CV
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%正文环境开始。
+\begin{document}
+%调入中文封面，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{CHcover}
+%调入英文封面，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{ENcover}
+%调入声明，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{announcement}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%开始前文区。
+\frontmatter
+%设置前文区的页码为大写罗马数字，默认为小写罗马数字。
+\pagenumbering{Roman}
+%调入致谢，不要加拓展名tex
+%input和include命令均能够调入子文档，但include会重启一页
+\include{acknowledgement}
+%调入中文摘要，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{CHabstract}
+%调入英文摘要，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{ENabstract}
+%调入目录，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{tableofcotents}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%开始主文区。
+\mainmatter
+%设置主文区的页码为阿拉伯数字。
+\pagenumbering{arabic}
+%调入第一章，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{chapter1}
+%调入第二章，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{chapter2}
+%调入第三章，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{chapter3}
+%调入第四章，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{chapter4}
+%调入第五章，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{chapter5}
+%调入第X章，不要加拓展名tex。最后版本中删除。
+%input和include命令均能够调入子文档，但include会重启一页
+%\include{chapterx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%开始后文区。
+\backmatter
+%调入总结，不要加拓展名tex
+%input和include命令均能够调入子文档，但include会重启一页
+\include{summary}
+%调入参考文献，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{references}
+%调入附录A，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{appendagesA}
+%调入附录B，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{appendagesB}
+%调入附录C，不要加拓展名tex。附录C已经调试好，暂时不调入！！！
+%input和include命令均能够调入子文档，但include会重启一页
+\include{appendagesC}
+%调入附录D，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{appendagesD}
+%调入附录E，不要加拓展名tex。附录E已经调试好，暂时不调入！！！
+%input和include命令均能够调入子文档，但include会重启一页
+\include{appendagesE}
+%调入附录F，不要加拓展名tex。附录F已经调试好，暂时不调入！！！
+%input和include命令均能够调入子文档，但include会重启一页
+\include{appendagesF}
+%调入附录G，不要加拓展名tex。附录G已经调试好，暂时不调入！！！
+%input和include命令均能够调入子文档，但include会重启一页
+\include{appendagesG}
+%调入附录H，不要加拓展名tex。附录H已经调试好，暂时不调入！！！
+%input和include命令均能够调入子文档，但include会重启一页
+\include{appendagesH}
+%调入附录I，不要加拓展名tex。附录I已经调试好，暂时不调入！！！
+%input和include命令均能够调入子文档，但include会重启一页
+\include{appendagesI}
+%调入附录J，不要加拓展名tex。附录J已经调试好，暂时不调入！！！
+%input和include命令均能够调入子文档，但include会重启一页
+\include{appendagesJ}
+%调入索引，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+%\include{index}
+%调入个人简历，不要加拓展名tex。
+%input和include命令均能够调入子文档，但include会重启一页
+\include{CV}
+%正文环境结束。
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

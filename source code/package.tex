@@ -1,0 +1,92 @@
+%检测你文档中是否使用已经被淘汰了的宏包以及过时的命令。这个调用应该在最前面甚至文类声明之前。
+%\RequirePackage[l2tabu, orthodox]{nag}
+%调用xcolor宏包处理颜色，其中可选参数usenames允许使用预定义的颜色（black, blue, brown, cyan, darkgray, gray, green, lightgray, lime, magenta, olive, orange, pink, purple, red, teal, violet, white, yellow）
+%可选参数调用colortbl宏包设置彩色表格
+\usepackage[usenames,table]{xcolor}
+%设置页面布局，这里的参数是word的默认布局
+\usepackage [top=2.54cm,bottom=2.54cm,left=3.18cm,right=3.18cm,headheight=15pt]{geometry}
+%调用comment宏包添加comment环境
+\usepackage{comment}
+%调用这两个包用于后面产生文本。它们的顺序很重要，而且不要忘记语言选项，否则是拉丁文http://texblog.org/2011/02/26/generating-dummy-textblindtext-with-latex-for-testing/
+\usepackage[english]{babel}
+\usepackage{blindtext}
+%调用lipsum产生段落。这些段落不是随机生成的，而是从公元前45年的古典拉丁文学著作中截取150个段落中挑选段落。因为这部著作的第一段的前两个词为：Lorem ipsum，因此称为 lipsum。
+%http://texblog.org/2011/02/26/generating-dummy-textblindtext-with-latex-for-testing/
+\usepackage{lipsum}
+
+%调用ctex宏包处理中文，默认在document环境中插入CJK*环境
+%对GB2312格式的文件，引用ctex宏包时无需添加编码格式选项。对于UTF8格式的文件需要加上“UTF8” 参数
+\begin{comment}
+	ctex宏包的space选项将CJK*环境变为CJK环境。在该环境中排版会保留中文与其他字符之间的空格及换行时自动插入的空格。若发现发现换行时自动插入的空格影响美观请查阅资料进行调整。由于调用中文标题设置宏包会自动加载ctex宏包，故这里将其注释起来。
+\end{comment}
+%调用titletoc宏包修改目录格式，该宏包调用命令必须在ctexcap之前，否则它将覆盖ctexcap对目录的设置
+\usepackage{titletoc}
+%\usepackage[space,UTF8]{ctex}
+%调用中文标题宏包设置中文标题，该宏包自动加载ctex宏包
+\usepackage[UTF8]{ctexcap}
+%调用fancyhdr宏包处理页眉和页脚，该宏包默认有0.4 pt的页眉线但无页脚线
+\usepackage{fancyhdr}
+%调用graphicx宏包来插入图片
+\usepackage{graphicx}
+%调用hyperrref宏包给各种交叉引用进行超级链接，同时产生PDF中的书签。文档采用UTF-8编码并在参数中选择unicode，否则书签中的中文乱码。该宏包的参数见https://mirrors.tuna.tsinghua.edu.cn/CTAN/macros/latex/contrib/hyperref/doc/options.pdf
+\usepackage[colorlinks, unicode, bookmarksnumbered=true, bookmarksopen=true, allcolors=black, allbordercolors=black, hidelinks,pdfpagelabels]{hyperref}
+%数学相关宏包
+\usepackage{amsmath}
+%调用算术宏包calc进行数学运算
+\usepackage{calc}
+%调用times宏包把\rmdefault设置成Times New Roman字体，把\sfdefault设置成Helvetica，把\ttdefault设置成Courier。 然而它没有更换数学字体。所以这种方法已经不被推荐
+%\usepackage{times}
+%请尝试用下面的代码替换\usepackage{times}
+\usepackage{mathptmx}
+\usepackage[scaled=.91]{helvet}
+\usepackage{courier}
+%This is true Times New Roman, via modern TeX engines(http://tex.stackexchange.com/questions/67768/times-new-roman-font)
+%Compile with XeLaTeX or LuaLaTeX
+%\usepackage{fontspec}
+%\setmainfont{Times New Roman}
+%调用数组宏包array插入表格。由于后面的tabularx会加载array，这里将其注释起来。
+%\usepackage{array}
+%调用tabularx插入可调列宽的表格。该宏包将自动调用array宏包。
+\usepackage{tabularx}
+%调用ltxtable插入跨页可调列宽的表格。该宏包要求表格代码在独立的tex文档，使用一条命令插入表格。
+\usepackage{ltxtable}
+%调用multirow插入跨行表格
+\usepackage{multirow}
+%调用booktabs绘制三线表
+\usepackage{booktabs}
+%行号宏包，在最终版本中请将其注释起来。单独的宏包调用命令不足以产生行号，在commands.tex中有对应的命令
+%\usepackage[switch, pagewise]{lineno}
+%调用caption宏包来控制图表标题的格式，但是这里与ccaption宏包冲突故将其注释起来备用
+%caption宏包已经是3.x版，所以后面有一个日期来限定其版本，使用前请检查版本
+%\usepackage[labelsep=space]{caption}[2004/07/16]
+%调用ccaption宏包输入双语标题，不能使用caption2选项（有冲突，原因不明）
+%经过试验，ccaption不能使用类似caption的选项。调整标题格式的命令在commands.tex文档中
+\usepackage{ccaption}
+%调用natbib宏包调整文献条目之间的距离，该宏包还有其他功能
+\usepackage[round, authoryear, sort]{natbib}
+%调用siunitx输入单位符号
+\usepackage[version-1-compatibility]{siunitx}
+\usepackage{upgreek}
+%调用下划线宏包
+%该宏包会将\emph重定义成下划线，如果不希望修改可在调用时增加选项normalem
+\usepackage{ulem}
+%调用makeidx插入索引
+\usepackage{makeidx}
+%调用paralist宏包插入列表
+\usepackage{paralist}
+%调用bbding插入图形符号
+\usepackage{bbding}
+%ccaption宏包修改图表编号模式需要调用该宏包
+\usepackage{remreset}
+%调用wasysym宏包在简历中使用性别符号
+\usepackage{wasysym}
+%调用setspace宏包修改目录的行距
+\usepackage{setspace}
+%调用footnpag宏包设置脚注以页为排序单位
+\usepackage{footnpag}
+%调用syntonly宏包使文档编译时只检查语法，这样可以大大缩短长文档的编译时间
+%在最终版本中请将该宏包注释起来
+%\usepackage{syntonly}
+%\syntaxonly
+%调用textgreek使用文本模式的希腊字母，然而调用以后系统提示版式设置有问题，运行无法通过
+%\usepackage[cbgreek]{textgreek}

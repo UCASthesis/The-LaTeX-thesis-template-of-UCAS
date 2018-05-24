@@ -1,0 +1,34 @@
+%空行代表重启一个段落。
+%如果这里采用chapter插入参考文献会产生两页空白，因为\bibliography{library1}命令又会重启一章
+%\chapter{参考文献}
+%如果使用article文类请使用\clearpage命令，该命令可以解决手动添加目录到目录中页码不一致的问题
+\cleardoublepage
+%如果使用了Hyperref宏包生成书签，还需要使用命令，否则书签中显示不正常
+\phantomsection
+\addcontentsline{toc}{chapter}{参考文献}
+%直接在奇数页页眉中显示章标题会多处一些章标题内部编号，这里重新定义\leftmark，后续所有章节都要重新定义
+\renewcommand{\leftmark}{参考文献}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     可用的引文插入命令。这些命令有natbib宏包提供。了解更多请谷歌一下。
+%     \cite{jon90} =) Jones et al. (1990)
+%     \citet{jon90} =) Jones et al. (1990)
+%     \citet[Chap.2]{jon90} =) Jones et al. (1990, Chap. 2)
+%     \citet*{jon90} =) Jones, Baker, and Williams (1990)
+%     \citep{jon90} =) (Jones et al., 1990)
+%     \citep*{jon90} =) (Jones, Baker, and Williams, 1990)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%缩小参考文献列表字号
+\small
+%调整条目从第二行开始的缩进
+\setlength{\bibhang}{0pt}
+%重定义文献条目编号。理论上默认的的应该就有，不知为何需要重写一遍才出来。
+\makeatletter
+\renewcommand\@biblabel[1]{[#1]}
+\makeatother
+%调入参考文献格式文档，不需要拓展名bst。doctor.bst文档放在主tex文档文件夹中。
+\bibliographystyle{doctor}
+%\bibliographystyle{google1}
+%调入参考文献库文档，不需要拓展名bib。多个文献库名之间用逗号分开且没有空格。PHD.bib文档放在主tex文档文件夹中。
+\bibliography{PHD}
+%恢复后文字号
+\normalsize

@@ -1,0 +1,17 @@
+%空行代表重启一个段落。
+%开始插入附录
+%\appendix
+%如果这里采用chapter插入参考文献会产生两页空白，因为\printindex命令又会重启一章
+%\chapter{附录J\quad 索引}\label{appen:J}
+%如果使用article文类请使用\clearpage命令，该命令可以解决手动添加目录到目录中页码不一致的问题
+\cleardoublepage
+%如果使用了Hyperref宏包生成书签，还需要使用命令，否则书签中显示不正常
+\phantomsection
+\addcontentsline{toc}{chapter}{索\quad 引}
+%直接在奇数页页眉中显示章标题会多处一些章标题内部编号，这里重新定义\leftmark，后续所有章节都要重新定义
+\renewcommand{\leftmark}{索\quad 引}
+%生成索引
+\printindex
+
+
+

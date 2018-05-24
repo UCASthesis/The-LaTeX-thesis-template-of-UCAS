@@ -1,0 +1,24 @@
+%空行代表重启一个段落。
+%开始插入附录
+%\appendix
+\chapter{附录E\quad 本研究所用藻株}\label{appen:E}
+%直接在奇数页页眉中显示章标题会多处一些章标题内部编号，这里重新定义\leftmark，后续所有章节都要重新定义
+\renewcommand{\leftmark}{附录E\quad 本研究所用藻株}
+%将章节号计数器设置为5
+\setcounter{chapter}{5}
+%将插图序号计数器设置为1
+\setcounter{figure}{0}
+%将表格序号计数器设置为1
+\setcounter{table}{0}
+%利用左右盒子为长表添加标题。不推荐用这种方法，但是目前还没有找到能用的手段。
+\makebox[\textwidth][c]{\small 表E1 本研究所用藻株。}
+%这里必须空一行。
+
+\makebox[\textwidth][c]{\small Table E1 \textit{Chlamydomonas} strains used in this study.}
+%调整字号
+\small
+%插入表格但是最多有一种语言的标题。如果需要双语标题就留空然后在PDF中编辑。
+\LTXtable{\textwidth}{appendagesEcode.tex}
+$^a$CRC, \textit{Chlamydomonas} Resource Center
+%调整字号
+\normalsize

@@ -1,0 +1,255 @@
+%空行代表重启一个段落。
+%开始插入附录
+%\appendix
+\chapter{附录C\quad 本研究所用培养基}\label{appen:C}
+%直接在奇数页页眉中显示章标题会多处一些章标题内部编号，这里重新定义\leftmark，后续所有章节都要重新定义
+\renewcommand{\leftmark}{附录C\quad 本研究所用培养基}
+%将章节号计数器设置为3
+\setcounter{chapter}{3}
+%将插图序号计数器设置为1
+\setcounter{figure}{0}
+%将表格序号计数器设置为1
+\setcounter{table}{0}
+
+%开始表格浮动体环境，其中！表示取消严谨限制，h表示在此处插入，t表示在本页或下一页顶部插入
+\begin{table}[htbp]
+%调整字号
+\small
+%居中对齐
+\centering
+%生成中英双语标题
+{\setstretch{1.667}
+\bicaption[tab:tableC1]{表}{TAP\ 培养基配方。}{Table}{Formulation of the TAP medium.}
+\par}
+%开始绘制表格
+\begin{tabular*}{\textwidth}[c]{@{\extracolsep{\fill}}lll}
+%绘制一条水平线
+\toprule
+编号\ (Number) & 母液\ (Stock Solution) & 体积或质量\ (Volume or Mass)\\
+\midrule
+1 & 100xTris* & 10 mL\\
+2 & 100xTAP salts** & 10 mL\\
+3 & Phosphate salts** & 1 mL\\
+4 & Trace metals** & 1 mL\\
+5 & Glacial acetic acid & 1 mL\\
+6 & Agar (for solid medium only) & 15 g\\
+7 & ddH$_2$O & To 1 L\\
+\bottomrule
+\multicolumn{2}{l}{*Dissolve 24.2g Tris in 100 mL water.}\\
+\multicolumn{2}{l}{**See below for detailed information.}
+%结束绘制表格
+\end{tabular*}
+%结束表格浮动体环境
+\end{table}
+
+\vspace{35pt}
+
+%开始表格浮动体环境，其中！表示取消严谨限制，h表示在此处插入，t表示在本页或下一页顶部插入
+\begin{table}[htbp]
+%调整字号
+\small
+%居中对齐
+\centering
+%生成中英双语标题
+{\setstretch{1.667}
+\bicaption[tab:tableC2]{表}{100x TAP salts\ 配方。}{Table}{Formulation of 100x TAP salts used for the TAP medium.}
+\par}
+%开始绘制表格
+\begin{tabular*}{\textwidth}[c]{@{\extracolsep{\fill}}lll}
+%绘制一条水平线
+\toprule
+编号\ (Number) & 试剂\ (Reagents) & 质量或体积\ (Mass or Volume)\\
+\midrule
+1 & NH$_4$Cl & 37.5 g\\
+2 & MgSO$_4$$\cdot$7H$_2$O & 10 g\\
+3 & CaCl$_2$$\cdot$H$_2$O & 5 g\\
+4 & ddH$_2$O & To 1 L\\
+\bottomrule
+%结束绘制表格
+\end{tabular*}
+%结束表格浮动体环境
+\end{table}
+
+\vspace{35pt}
+
+%开始表格浮动体环境，其中！表示取消严谨限制，h表示在此处插入，t表示在本页或下一页顶部插入
+\begin{table}[htbp]
+%调整字号
+\small
+%居中对齐
+\centering
+%生成中英双语标题
+{\setstretch{1.667}
+\bicaption[tab:tableC3]{表}{Phosphate salts\ 配方。}{Table}{Formulation of Phosphate salts used for the TAP medium.}
+\par}
+%开始绘制表格
+\begin{tabular*}{\textwidth}[c]{@{\extracolsep{\fill}}lll}
+%绘制一条水平线
+\toprule
+编号\ (Number) & 试剂\ (Reagents) & 质量或体积\ (Mass or Volume)\\
+\midrule
+1 & K$_2$HPO$_4$ & 54 g\\
+2 & KH$_2$PO$_4$ & 27 g\\
+3 & ddH$_2$O & To 500 mL\\
+\bottomrule
+%结束绘制表格
+\end{tabular*}
+%结束表格浮动体环境
+\end{table}
+
+%开始表格浮动体环境，其中！表示取消严谨限制，h表示在此处插入，t表示在本页或下一页顶部插入
+\begin{table}[htbp]
+%调整字号
+\small
+%居中对齐
+\centering
+%生成中英双语标题
+{\setstretch{1.667}
+\bicaption[tab:tableC4]{表}{Trace metals\ 配方*。}{Table}{Formulation of Trace metals used for the TAP medium.}
+\par}
+%开始绘制表格
+\begin{tabular*}{\textwidth}[c]{@{\extracolsep{\fill}}llll}
+%绘制一条水平线
+\toprule
+编号\ (Number) & 试剂\ (Reagents) & 质量\ (Mass)  & 去离子水体积\ (Volume of ddH$_2$O)\\
+\midrule
+1 & EDTA disodium salt   & 50 g  & 250 mL\\
+2 & ZnSO$_4$$\cdot$7H$_2$O           &22 g   & 100 mL\\
+3 & H$_3$BO$_3$                &11.4 g & 200 mL\\
+4 & MnCl$_2$$\cdot$4H$_2$O           &5.06 g & 50 mL\\
+5 & CoCl$_2$$\cdot$6H$_2$O           &1.61 g & 50 mL\\
+6 & CuSO$_4$$\cdot$5H$_2$O           &1.57 g & 50 mL\\
+7 & (NH$_4$)$_6$Mo$_7$O$_{24}$$\cdot$4H$_2$O    &1.1 g  & 50 mL\\
+8 & FeSO$_4$$\cdot$7H$_2$O           &4.99 g & 50 mL\\
+\bottomrule
+%结束绘制表格
+\end{tabular*}
+%结束表格浮动体环境
+\end{table}
+*Dissolve each compound in the volume of water indicated. The EDTA disodium salt should be dissolved in boiling water, and the FeSO$_4$ should be prepared last to avoid oxidation. Mix all solutions except EDTA disodium salt. Bring this mixture to boil and add EDTA disodium salt solution. The mixture should turn green. When everything is dissolved, cool to \SI{70}{\degreeCelsius}. Keeping temperature at \SI{70}{\degreeCelsius}, adjust the pH to 6.7 with 50 mL KOH (20\%). Remember to standardize the pH meter with buffer at the same temperature. Do not use NaOH to adjust the pH value. Bring the final solution to 1 liter. It should be clear green initially. Stopper the flask with a cotton plug and let it stand for 1-2 weeks, shaking it once a day. The solution should eventually turn purple and leave a rust-brown precipitate, which can be removed by filtering through two layers of Whatman \#1 filter paper, repeating the filtration if necessary until the solution is clear. It can be stored refrigerated or frozen in convenient aliquots.
+
+\vfill
+
+%开始表格浮动体环境，其中！表示取消严谨限制，h表示在此处插入，t表示在本页或下一页顶部插入
+\begin{table}[htbp]
+%调整字号
+\small
+%居中对齐
+\centering
+%生成中英双语标题
+{\setstretch{1.667}
+\bicaption[tab:tableC5]{表}{MI\ 培养基配方*。}{Table}{Formulation of the MI medium.}
+\par}
+%开始绘制表格
+\begin{tabular*}{\textwidth}[c]{@{\extracolsep{\fill}}lll}
+%绘制一条水平线
+\toprule
+母液\ (Stock Solution) & 浓度\ (Concentration)     & 体积或质量\ (Volume or Mass)\\
+\midrule
+C$_6$H$_5$Na$_3$O$_7$$\cdot$2H$_2$O& 500 g/L  &1 mL       \\
+ FeCl$_3$$\cdot$6H$_2$O             &10 g/L    &1 mL       \\
+ CaCl$_2$$\cdot$2H$_2$O             & 53 g/L   &1 mL       \\
+ MgSO$_4$$\cdot$7H$_2$O             & 300 g/L  &1 mL       \\
+ NH$_4$NO$_3$                       & 450 g/L  &1 mL       \\
+K$_2$HPO$_4$                       & 200 g/L  &0.5 mL     \\
+ KH$_2$PO$_4$                       & 200 g/L  &0.5 mL     \\
+ Trace elements                     & No       &1 mL       \\
+ H$_3$BO$_3$                        & 1 g/L    &No         \\
+ ZnSO$_4$$\cdot$7H$_2$O             & 1 g/L    &No         \\
+ MnSO$_4$$\cdot$H$_2$O              & 0.3 g/L  &No         \\
+ CoCl$_2$$\cdot$6H$_2$O             & 0.2 g/L  &No         \\
+Na$_2$MoO$_4$$\cdot$2H$_2$O        & 0.2 g/L  &No         \\
+CuSO$_4$$\cdot$5H$_2$O             & 0.04 g/L &No         \\
+ Agar (for solid medium only)       & No       & 15 g      \\
+ ddH$_2$O                           & No       & To 1 L    \\
+\bottomrule
+\multicolumn{3}{l}{*Adjust pH value to 6.9 before bring the final solution to 1 L.}
+%结束绘制表格
+\end{tabular*}
+%结束表格浮动体环境
+\end{table}
+
+
+%开始表格浮动体环境，其中！表示取消严谨限制，h表示在此处插入，t表示在本页或下一页顶部插入
+\begin{table}[htbp]
+%调整字号
+\small
+%居中对齐
+\centering
+%生成中英双语标题
+{\setstretch{1.667}
+\bicaption[tab:tableC6]{表}{LB\ 培养基配方。}{Table}{Formulation of the LB medium.}
+\par}
+%开始绘制表格
+\begin{tabular*}{\textwidth}[c]{@{\extracolsep{\fill}}lll}
+%绘制一条水平线
+\toprule
+编号\ (Number) & 试剂\ (Reagents) & 质量或体积\ (Mass or Volume)\\
+\midrule
+1 & Tryptone                     & 10 g\\
+2 & Yeast Extract                & 5 g\\
+3 & NaCl                         & 10 g\\
+4 & Agar (for solid medium only) & 15 g\\
+5 & ddH$_2$O                     & To 1 L\\
+\bottomrule
+%结束绘制表格
+\end{tabular*}
+%结束表格浮动体环境
+\end{table}
+
+%开始表格浮动体环境，其中！表示取消严谨限制，h表示在此处插入，t表示在本页或下一页顶部插入
+\begin{table}[htbp]
+%调整字号
+\small
+%居中对齐
+\centering
+%生成中英双语标题
+{\setstretch{1.667}
+\bicaption[tab:tableCX]{表}{SOB\ 培养基配方。}{Table}{Formulation of the SOB medium.}
+\par}
+%开始绘制表格
+\begin{tabular*}{\textwidth}[c]{@{\extracolsep{\fill}}lll}
+%绘制一条水平线
+\toprule
+编号\ (Number) & 试剂\ (Reagents) & 质量或体积\ (Mass or Volume)\\
+\midrule
+1 & Tryptone                     & 10 g\\
+2 & Yeast Extract                & 2.5 g\\
+3 & NaCl                         & 0.25 g\\
+4 & KCl                          & 0.093 g\\
+5 & ddH$_2$O                     & To 500 mL\\
+\bottomrule
+%结束绘制表格
+\end{tabular*}
+%结束表格浮动体环境
+\end{table}
+
+%开始表格浮动体环境，其中！表示取消严谨限制，h表示在此处插入，t表示在本页或下一页顶部插入
+\begin{table}[htbp]
+%调整字号
+\small
+%居中对齐
+\centering
+%生成中英双语标题
+{\setstretch{1.667}
+\bicaption[tab:tableC7]{表}{培养基中各种抗生素的浓度。}{Table}{The concentration of antibiotics used in various media in this study.}
+\par}
+%开始绘制表格
+\begin{tabular*}{\textwidth}[c]{@{\extracolsep{\fill}}lll}
+%绘制一条水平线
+\toprule
+抗生素\ (Antibiotics) & 母液浓度\ (Stock Concentration) & 工作液浓度\ (Work Concentration) \\
+\midrule
+氨苄青霉素   & \SI{100}{\mg/\mL} & \SI{100}{\ug/\mL}  \\
+巴龙霉素     & \SI{10}{\mg/\mL}  & \SI{10}{\ug/\mL}   \\
+潮霉素B      & \SI{50}{\mg/\mL}  & \SI{12.5}{\ug/\mL} \\
+盐酸博来霉素 & \SI{100}{\mg/\mL} & \SI{2.5}{\ug/\mL}  \\
+\bottomrule
+\multicolumn{3}{l}{*不同来源的盐酸博来霉素中有效成分差别很大，请通过预实验调整浓度！}
+%结束绘制表格
+\end{tabular*}
+%结束表格浮动体环境
+\end{table}
+
+%\vspace{\fill}
+%\phantom{nothing}

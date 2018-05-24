@@ -1,0 +1,66 @@
+%开始表格浮动体环境，其中！表示取消严谨限制，h表示在此处插入，t表示在本页或下一页顶部插入
+\begin{longtable}{>{\hsize=0.4\hsize}Xl>{\hsize=0.65\hsize}Xl @{}}
+%绘制一条水平线
+\toprule
+\textbf{Strain Name} & \textbf{Number} & \textbf{Description} & \textbf{Source}\\
+\midrule
+\endfirsthead
+\multicolumn{4}{l}{\footnotesize 接上页}\\
+\toprule
+\textbf{Strain Name} & \textbf{Number} & \textbf{Description} & \textbf{Source}\\
+\midrule
+\endhead
+\hline
+\multicolumn{4}{r}{\footnotesize 接下页}\\
+\endfoot
+\endlastfoot
+%break the sequence every 20 bases using \- or \allowbreak
+%注意在命令后使用空格命令{}[SPACE]或\[SPACE]增加水平空白
+\textit{bld1} & HS60 & the null mutant of \textit{IFT52} & CRC$^a$\\
+\textit{bld1}\ \textit{IFT46} & HS265 & expressing IFT46::YFP by transforming pHK214 in \textit{bld1} & this study\\
+\textit{bld1}\ \textit{IFT46 IFT52} & HS266 & expressing IFT46::YFP IFT52::3HA by transforming pHK266 and pHK409 in \textit{bld1} & this study\\
+\textit{bld1}\ \textit{IFT46-C1} & HS267 & expressing IFT46-C1::YFP by transforming pHK245 in \textit{bld1} & this study\\
+\textit{bld1}\ \textit{IFT46-C1 IFT52} & HS268 & expressing IFT46-C1::YFP IFT52::3HA by transforming pHK242 and pHK409 in \textit{bld1} & this study\\
+CC125 & HS2 & wild-type & CRC\\
+CC125\ \textit{IFT46} & HS251 & expressing IFT46::YFP by transforming pHK214 in CC125 & this study\\
+CC125\ \textit{IFT46-C} & HS252 & expressing IFT46-C::YFP by transforming pHK244 in CC125 & this study\\
+CC125\ \textit{IFT46-C1} & HS253 & expressing IFT46-C1::YFP by transforming pHK245 in CC125 & this study\\
+CC125\ \textit{IFT46-N} & HS254 & expressing IFT46-N::YFP by transforming pHK232 in CC125 & this study\\
+CC125\ \textit{IFT46-N1} & HS255 & expressing IFT46-N1::YFP by transforming pHK231 in CC125 & this study\\
+CC125\ \textit{IFT46$\Updelta$C1} & HS256 & expressing IFT46ΔC1::YFP by transforming pHK233 in CC125 & this study\\
+CC125\ \textit{IFT46$\Updelta$N1} & HS257 & expressing IFT46ΔN1::YFP by transforming pHK243 in CC125 & this study\\
+CC125\allowbreak\ \textit{IFT52C::YFP::NLS} & HS291 & expressing IFT52C::YFP::NLS by transforming pHK473 in CC125 & this study\\
+CC125\ \textit{YFP} & HS258 & expressing YFP by transforming pHK281 in CC125 & this study\\
+CC125\ \textit{YFP::NLS} & HS292 & expressing YFP::NLS by transforming pHK464 in CC125 & this study\\
+\textit{dhc1b} & HS15 & the null mutant of \textit{DHC1b} & CRC\\
+\textit{dhc1b}\ \textit{IFT46} & HS245 & expressing IFT46::YFP by transforming pHK214 in \textit{dhc1b} & this study\\
+\textit{dhc1b}\ \textit{IFT46-C1} & HS246 & expressing IFT46-C1::YFP by transforming pHK245 in \textit{dhc1b} & this study\\
+\textit{fla10-2} & HS54 & the null mutant of \textit{FLA10} & CRC\\
+\textit{fla10}\ \textit{IFT46} & HS248 & expressing IFT46::YFP by transforming pHK214 in \textit{fla10} & this study\\
+\textit{fla10}\ \textit{IFT46-C1} & HS249 & expressing IFT46-C1::YFP by transforming pHK245 in \textit{fla10} & this study\\
+\textit{ift122-1} & HS263 & the null mutant of \textit{IFT122} & Junmin Pan\\
+\textit{ift46-1} & HS44 & the null mutant of \textit{IFT46} & CRC\\
+\textit{ift46-1}\ \textit{BBTS1} & HS277 & expressing BBTS1::YFP by transforming pHK308 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{BBTS2} & HS278 & expressing BBTS2::YFP by transforming pHK309 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{BBTS3} & HS279 & expressing BBTS3::YFP by transforming pHK310 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{BBTS3 IFT46} & HS284 & expressing BBTS3::YFP IFT46 by transforming pHK310, pGEM-T Easy-\textit{IFT46} and pHyg3 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{BBTS4} & HS280 & expressing BBTS4::YFP by transforming pHK311 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{BBTS5} & HS281 & expressing BBTS5::YFP by transforming pHK312 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{BBTS6} & HS282 & expressing BBTS6::YFP by transforming pHK313 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{IFT46} & HS262 & expressing IFT46::YFP by transforming pHK214 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{IFT46-C} & HS271 & expressing IFT46-C::YFP by transforming pHK244 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{IFT46-C1} & HS272 & expressing IFT46-C1::YFP by transforming pHK245 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{IFT46-C1$^{L285E/L286E}$} & HS285 & expressing IFT46-C1$^{L285E/L286E}$::YFP by transforming pHK267 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{IFT46-N} & HS273 & expressing IFT46-N::YFP by transforming pHK232 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{IFT46-N1} & HS274 & expressing IFT46-N1::YFP by transforming pHK231 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{IFT46$\Updelta$C1} & HS275 & expressing IFT46$\Updelta$C1::YFP by transforming pHK245 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{IFT46$\Updelta$N1} & HS276 & expressing IFT46$\Updelta$N1::YFP by transforming pHK243 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{IFT52} & HS269 & expressing IFT52::YFP by transforming pHK268 in \textit{ift46-1} & this study\\
+\textit{ift46-1}\ \textit{YFP} & HS283 & expressing YFP by transforming pHK281 in \textit{ift46-1} & this study\\
+\textit{ift81-2} & HS264 & the null mutant of \textit{IFT81} & Junmin Pan\\
+\textit{ift88} & HS4 & the null mutant of \textit{IFT88} & CRC\\
+\textit{ift88}\ \textit{IFT46} & HS259 & expressing IFT46::YFP by transforming pHK214 in \textit{ift88} & this study\\
+\textit{ift88}\ \textit{IFT46-C1} & HS260 & expressing IFT46-C1::YFP by transforming pHK245 in \textit{ift88} & this study\\
+\bottomrule
+%结束表格浮动体环境
+\end{longtable}

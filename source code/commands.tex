@@ -1,0 +1,69 @@
+%设置chapter的目录格式，其余标题使用默认设置
+%\titlecontents{chapter}%
+%[0em]%
+%{\vspace{3mm}\heiti}%
+%{\thecontentslabel}%
+%{}%
+%{\titlerule*[0.2pc]{$\cdot$}\bf\contentspage}
+
+%设置标题的格式，注意left指的是标题内容与左侧版心之间的距离
+\dottedcontents{chapter}[4em]{\vspace{3mm}\heiti\bf}{4em}{0.2pc}
+\dottedcontents{section}[4em]{\vspace{1.5mm}}{2.2em}{0.2pc}
+\dottedcontents{subsection}[7em]{\vspace{0.75mm}}{3em}{0.2pc}
+\dottedcontents{subsubsection}[11em]{}{4em}{0.2pc}
+%设置chapter标题与上下文之间的间距，更改章标题字号
+\CTEXsetup[beforeskip={0pt},afterskip={15pt},nameformat+={\Large},titleformat+={\Large}]{chapter}
+%将section设置为左对齐，更改section字号
+\CTEXsetup[format+={\flushleft\large},beforeskip={3.25ex plus 1ex minus .2ex},afterskip={1.5ex plus .2ex}]{section}
+%更改subsubsection字号
+\CTEXsetup[format+={\normalsize},beforeskip={1.5ex plus .2ex minus .2ex}]{subsection}
+\CTEXsetup[beforeskip={1.5ex plus .2ex minus .2ex}]{subsubsection}
+%设置标题深度为3，这样subsubsection前即可显示编号，否则没有
+\setcounter{secnumdepth}{3}
+%替换book文类默认的版式为fancy
+\pagestyle{fancy}
+%清空版式内容以便重新设置
+\fancyhf{}
+%右页页眉中间为章标题，其中\noupercase命令可避免系统将所有英文转换为大写
+\fancyhead[OC]{\color{darkgray} \nouppercase{ \leftmark}}
+%左页页眉中间为论文中文标题，其中\color命令可使页眉页脚为灰色（水印效果）
+\fancyhead[EC]{\color{darkgray} \nouppercase{衣藻鞭毛内运输蛋白IFT46基体定位机制的研究}}
+%右页右侧和左页左侧为页码
+\fancyfoot[OR, EL]{\color{darkgray} \thepage}
+%重定义\headrule命令使页眉线为灰色
+\renewcommand{\headrule}{\color{darkgray} \hrule width\headwidth}
+%重定义plain版式使章首页的版式与其他地方一致
+\fancypagestyle{plain}{\fancyhf{}%
+\fancyhead[OC]{\color{darkgray} \nouppercase{ \leftmark}}%
+\fancyhead[EC]{\color{darkgray} \nouppercase{your CHtitle here}}%
+\fancyfoot[OR, EL]{\color{darkgray} \thepage}%
+\renewcommand{\headrule}{\color{darkgray} \hrule width\headwidth}}
+%来自ccaption宏包的命令，将分隔符由：更改为空格
+\captiondelim{\space}
+%设置三线表中线条上下的空白
+\setlength{\abovetopsep}{5pt}
+\setlength{\belowrulesep}{0ex}
+\setlength{\aboverulesep}{0ex}
+\setlength{\belowbottomsep}{0pt}
+%行号起始命令
+%\linenumbers[1]
+%行号字体命令
+%\renewcommand{\linenumberfont}{\normalfont \small \sffamily}
+%缩短文献条目之间的距离，该命令有natbib宏包提供
+%关于中文文献的处理请参考http://blog.sina.com.cn/s/blog_5e16f1770100l3kc.html
+\addtolength{\bibsep}{-11pt}
+%改善单词、字母的间距。使用之后文档看起来更好，也更容易阅读
+%因为这个宏包对单词、字母的调整和字体是有关，所以将其置于命令文档的最后一行
+\usepackage{microtype}
+%使用该命令用于表格内换行
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+%创建索引命令
+\makeindex
+%改变浮动体（这里主要是图和表）标题的字号，注意图片注释的字号也缩小了
+\captionnamefont{\small}
+\captiontitlefont{\small}
+%修改全文行距，其中参数1.2代表单倍行距，1.25代表1.5倍行距，1.667代表双倍行距
+%该命令必须在ctex宏包调用命令之后
+\linespread{1.667}
+
+
